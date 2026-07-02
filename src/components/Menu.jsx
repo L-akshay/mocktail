@@ -1,12 +1,13 @@
-'use client';
+"use client";
 
+import "../lib/registerGsap.js";
 import { allCocktails } from '../../constants/index.js'
 import { useRef, useState } from 'react'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap';
 
 const Menu = () => {
- const contentRef = useRef();
+ const contentRef = useRef(null);
  const [currentIndex, setCurrentIndex] = useState(0);
  
  useGSAP(() => {
@@ -44,10 +45,10 @@ const Menu = () => {
 	 <img src="/images/slider-right-leaf.png" alt="right-leaf" id="m-right-leaf" />
 	 
 	 <h2 id="menu-heading" className="sr-only">
-		Cocktail Menu
+		カクテルメニュー
 	 </h2>
 	 
-	 <nav className="cocktail-tabs" aria-label="Cocktail Navigation">
+	 <nav className="cocktail-tabs" aria-label="カクテルナビゲーション">
 		{allCocktails.map((cocktail, index) => {
 		 const isActive = index === currentIndex;
 		 
@@ -83,7 +84,7 @@ const Menu = () => {
 		
 		<div className="recipe">
 		 <div ref={contentRef} className="info">
-			<p>Recipe for:</p>
+			<p>レシピ:</p>
 			<p id="title">{currentCocktail.name}</p>
 		 </div>
 		 

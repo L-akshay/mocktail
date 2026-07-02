@@ -1,183 +1,112 @@
 const navLinks = [
- {
-	id: "cocktails",
-	title: "Cocktails",
- },
- {
-	id: "about",
-	title: "About Us",
- },
- {
-	id: "work",
-	title: "The Art",
- },
- {
-	id: "contact",
-	title: "Contact",
- },
+  { id: "cocktails", title: "カクテル", href: "/cocktails" },
+  { id: "about", title: "私たちについて", href: "/about" },
+  { id: "art", title: "技術", href: "/art" },
+  { id: "menu", title: "メニュー", href: "/menu" },
+  { id: "contact", title: "お問い合わせ", href: "/contact" },
 ];
 
 const cocktailLists = [
- {
-	name: "Chapel Hill Shiraz",
-	country: "AU",
-	detail: "Battle",
-	price: "$10",
- },
- {
-	name: "Caten Malbee",
-	country: "AU",
-	detail: "Battle",
-	price: "$49",
- },
- {
-	name: "Rhino Pale Ale",
-	country: "CA",
-	detail: "750 ml",
-	price: "$20",
- },
- {
-	name: "Irish Guinness",
-	country: "IE",
-	detail: "600 ml",
-	price: "$29",
- },
+  { name: "チャペルヒル・シラーズ", country: "AU", detail: "ボトル", price: "1,500円" },
+  { name: "カテナ・マルベック", country: "AU", detail: "ボトル", price: "7,400円" },
+  { name: "ライノ・ペールエール", country: "CA", detail: "750 ml", price: "3,000円" },
+  { name: "アイリッシュ・ギネス", country: "IE", detail: "600 ml", price: "4,300円" },
 ];
 
 const mockTailLists = [
- {
-	name: "Tropical Bloom",
-	country: "US",
-	detail: "Battle",
-	price: "$10",
- },
- {
-	name: "Passionfruit Mint",
-	country: "US",
-	detail: "Battle",
-	price: "$49",
- },
- {
-	name: "Citrus Glow",
-	country: "CA",
-	detail: "750 ml",
-	price: "$20",
- },
- {
-	name: "Lavender Fizz",
-	country: "IE",
-	detail: "600 ml",
-	price: "$29",
- },
+  { name: "トロピカル・ブルーム", country: "JP", detail: "グラス", price: "1,500円" },
+  { name: "パッションミント", country: "JP", detail: "グラス", price: "1,700円" },
+  { name: "シトラス・グロウ", country: "CA", detail: "750 ml", price: "3,000円" },
+  { name: "ラベンダー・フィズ", country: "IE", detail: "600 ml", price: "4,300円" },
 ];
 
 const profileLists = [
- {
-	imgPath: "/images/profile1.png",
- },
- {
-	imgPath: "/images/profile2.png",
- },
- {
-	imgPath: "/images/profile3.png",
- },
- {
-	imgPath: "/images/profile4.png",
- },
+  { imgPath: "/images/profile1.png" },
+  { imgPath: "/images/profile2.png" },
+  { imgPath: "/images/profile3.png" },
+  { imgPath: "/images/profile4.png" },
 ];
 
 const featureLists = [
- "Perfectly balanced blends",
- "Garnished to perfection",
- "Ice-cold every time",
- "Expertly shaken & stirred",
+  "均整のとれたブレンド",
+  "最後まで美しいガーニッシュ",
+  "いつでも冷たく澄んだ一杯",
+  "シェイクとステアの確かな技術",
 ];
 
 const goodLists = [
- "Handpicked ingredients",
- "Signature techniques",
- "Bartending artistry in action",
- "Freshly muddled flavors",
+  "厳選した素材",
+  "シグネチャーの技法",
+  "目の前で仕上げる所作",
+  "弾けるようなフレッシュ感",
 ];
 
 const storeInfo = {
- heading: "Where to Find Us",
- address: "456, Raq Blvd. #404, Los Angeles, CA 90210",
- contact: {
-	phone: "(555) 987-6543",
-	email: "hello@jsmcocktail.com",
- },
+  heading: "店舗情報",
+  address: "東京都渋谷区ラキュ通り456 #404",
+  contact: {
+    phone: "03-5555-9876",
+    email: "hello@velvetpour.jp",
+  },
 };
 
 const openingHours = [
- { day: "Mon–Thu", time: "11:00am – 12am" },
- { day: "Fri", time: "11:00am – 2am" },
- { day: "Sat", time: "9:00am – 2am" },
- { day: "Sun", time: "9:00am – 1am" },
+  { day: "月 - 木", time: "11:00 - 24:00" },
+  { day: "金", time: "11:00 - 26:00" },
+  { day: "土", time: "9:00 - 26:00" },
+  { day: "日", time: "9:00 - 25:00" },
 ];
 
 const socials = [
- {
-	name: "Instagram",
-	icon: "/images/insta.png",
-	url: "#",
- },
- {
-	name: "X (Twitter)",
-	icon: "/images/x.png",
-	url: "#",
- },
- {
-	name: "Facebook",
-	icon: "/images/fb.png",
-	url: "#",
- },
+  { name: "Instagram", icon: "/images/insta.png", url: "#" },
+  { name: "X", icon: "/images/x.png", url: "#" },
+  { name: "Facebook", icon: "/images/fb.png", url: "#" },
 ];
 
 const allCocktails = [
- {
-	id: 1,
-	name: "Classic Mojito",
-	image: "/images/drink1.png",
-	title: "Simple Ingredients, Bold Flavor",
-	description:
-	 "Made with tequila, lime juice, and orange liqueur, the Margarita is easy to make and full of character. Add a salted rim for the perfect drink on summer nights.",
- },
- {
-	id: 2,
-	name: "Raspberry Mojito",
-	image: "/images/drink2.png",
-	title: "A Zesty Classic That Never Fails",
-	description:
-	 "The Margarita is a classic that balances tangy lime, smooth tequila, and a touch of sweetness. Shaken, frozen, or on the rocks—it’s always crisp & refreshing.",
- },
- {
-	id: 3,
-	name: "Violet Breeze",
-	image: "/images/drink3.png",
-	title: "Simple Ingredients, Bold Flavor",
-	description:
-	 "Made with tequila, lime juice, and orange liqueur, the Margarita is easy to make and full of character. Add a salted rim for the perfect drink on summer nights.",
- },
- {
-	id: 4,
-	name: "Curacao Mojito",
-	image: "/images/drink4.png",
-	title: "Crafted With Care, Poured With Love",
-	description:
-	 "Each cocktail is made with fresh ingredients and a passion for perfecting every pour, whether you're celebrating or simply relaxing.",
- },
+  {
+    id: 1,
+    name: "クラシック・モヒート",
+    image: "/images/drink1.png",
+    title: "シンプルな素材に、鮮やかな余韻。",
+    description:
+      "ミント、ライム、ラムの香りをすっきり重ねた定番の一杯。暑い夜にも会話の始まりにも、軽やかに寄り添います。",
+  },
+  {
+    id: 2,
+    name: "ラズベリー・モヒート",
+    image: "/images/drink2.png",
+    title: "甘酸っぱさが弾ける、華やかなクラシック。",
+    description:
+      "ラズベリーの果実味とミントの清涼感を合わせ、甘さを控えめに整えました。香りの立ち上がりが印象的です。",
+  },
+  {
+    id: 3,
+    name: "ヴァイオレット・ブリーズ",
+    image: "/images/drink3.png",
+    title: "静かな夜に似合う、透明感のある味わい。",
+    description:
+      "花のニュアンスと柑橘の輪郭を重ね、すっきりとした後味に。ゆっくり味わいたい夜におすすめです。",
+  },
+  {
+    id: 4,
+    name: "キュラソー・モヒート",
+    image: "/images/drink4.png",
+    title: "丁寧に作り、心地よく注ぐ一杯。",
+    description:
+      "ブルーキュラソーの明るい香りに、ライムとミントの爽やかさを合わせました。祝いの席にもよく映えます。",
+  },
 ];
 
 export {
- navLinks,
- cocktailLists,
- mockTailLists,
- profileLists,
- featureLists,
- goodLists,
- openingHours,
- storeInfo,
- socials,
- allCocktails,
+  navLinks,
+  cocktailLists,
+  mockTailLists,
+  profileLists,
+  featureLists,
+  goodLists,
+  openingHours,
+  storeInfo,
+  socials,
+  allCocktails,
 };

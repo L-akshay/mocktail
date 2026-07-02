@@ -1,5 +1,6 @@
-import gsap from 'gsap';
-import { ScrollTrigger, SplitText } from "gsap/all";
+"use client";
+
+import "./lib/registerGsap.js";
 
 import Navbar from './components/Navbar.jsx'
 import Hero from './components/Hero.jsx'
@@ -8,8 +9,7 @@ import About from './components/About.jsx'
 import Art from './components/Art.jsx'
 import Menu from './components/Menu.jsx'
 import Contact from './components/Contact.jsx'
-
-gsap.registerPlugin(ScrollTrigger, SplitText);
+import SiteFooter from './components/SiteFooter.jsx'
 
 const App = () => {
  return (
@@ -21,6 +21,7 @@ const App = () => {
 	 <Art />
 	 <Menu />
 	 <Contact />
+	 <SiteFooter />
 	</main>
  )
 }
