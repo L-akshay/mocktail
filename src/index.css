@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap");
-
 @import "tailwindcss";
 
 @font-face {
@@ -10,9 +8,9 @@
 @theme {
     --color-yellow: #e7d393;
     --color-white-100: #efefef;
-    --font-sans: "Mona Sans", sans-serif;
+    --font-sans: var(--font-mona-sans), "Mona Sans", sans-serif;
     --font-modern-negra: "Modern Negra", sans-serif;
-    --font-serif: "DM Serif Text", serif;
+    --font-serif: var(--font-dm-serif), "DM Serif Text", serif;
 }
 
 html,
@@ -64,24 +62,44 @@ body {
         @apply w-full overflow-x-hidden;
     }
 
-    nav {
-        @apply fixed z-50 w-full;
+    nav.nav-root {
+        @apply fixed z-50 w-full bg-[#00000090] backdrop-blur-md transition-colors;
+    }
 
-        div {
-            @apply flex md:flex-row flex-col md:justify-between items-center gap-5 py-5 lg:px-0 px-5 container mx-auto;
-        }
+    .nav-inner {
+        @apply flex flex-row justify-between items-center gap-5 py-5 lg:px-10 px-5 container mx-auto;
+    }
 
-        p {
-            @apply font-modern-negra text-3xl -mb-2;
-        }
+    .nav-inner p {
+        @apply font-modern-negra text-3xl -mb-2;
+    }
 
-        a {
-            @apply cursor-pointer text-nowrap md:text-base text-sm;
-        }
+    .nav-inner a {
+        @apply cursor-pointer text-nowrap md:text-base text-sm;
+    }
 
-        ul {
-            @apply flex-center lg:gap-12 gap-7;
-        }
+    .nav-links-desktop {
+        @apply hidden md:flex items-center lg:gap-12 gap-7;
+    }
+
+    .nav-hamburger {
+        @apply md:hidden z-10 flex flex-col gap-1.5 w-6 h-6 justify-center;
+    }
+
+    .ham-line {
+        @apply w-full h-0.5 bg-white transition-all duration-300;
+    }
+
+    .nav-mobile-menu {
+        @apply md:hidden absolute top-full left-0 w-full bg-black/95 backdrop-blur-md border-t border-white/10;
+    }
+
+    .nav-mobile-menu ul {
+        @apply flex flex-col items-center py-6 gap-5;
+    }
+
+    .nav-mobile-menu a {
+        @apply text-lg hover:text-yellow transition-colors;
     }
 
     .noisy {
@@ -272,6 +290,18 @@ body {
                 }
             }
         }
+    }
+
+    .menu-page-header {
+        @apply container mx-auto relative z-10 text-center pt-10 pb-6 px-5;
+    }
+
+    .menu-page-title {
+        @apply font-modern-negra text-5xl md:text-7xl text-yellow leading-none mb-3;
+    }
+
+    .menu-page-sub {
+        @apply text-white-100 text-base md:text-lg;
     }
 
     #menu {
@@ -480,12 +510,12 @@ body {
         @apply text-sm md:text-base text-white-100 max-w-md;
     }
 
-    .site-footer nav {
+    .site-footer .site-footer-inner nav {
         @apply static z-auto w-full flex flex-col gap-3 bg-transparent p-0 m-0;
         backdrop-filter: none !important;
     }
 
-    .site-footer nav a {
+    .site-footer .site-footer-inner nav a {
         @apply text-sm md:text-base text-white-100 hover:text-yellow transition-colors;
     }
 

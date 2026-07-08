@@ -41,12 +41,13 @@ const Menu = () => {
  
  return (
 	<section id="menu" aria-labelledby="menu-heading">
-	 <img src="/images/slider-left-leaf.png" alt="left-leaf" id="m-left-leaf" />
-	 <img src="/images/slider-right-leaf.png" alt="right-leaf" id="m-right-leaf" />
+	 <img src="/images/slider-left-leaf.png" alt="left-leaf" id="m-left-leaf" loading="lazy" />
+	 <img src="/images/slider-right-leaf.png" alt="right-leaf" id="m-right-leaf" loading="lazy" />
 	 
-	 <h2 id="menu-heading" className="sr-only">
-		カクテルメニュー
-	 </h2>
+	 <div className="menu-page-header">
+	   <h2 id="menu-heading" className="menu-page-title">メニュー</h2>
+	   <p className="menu-page-sub">一杯ずつ丁寧に選んだカクテルをどうぞ。</p>
+	 </div>
 	 
 	 <nav className="cocktail-tabs" aria-label="カクテルナビゲーション">
 		{allCocktails.map((cocktail, index) => {

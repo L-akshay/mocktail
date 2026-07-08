@@ -10,13 +10,13 @@ const legalLinks = [
 export default function SiteFooter() {
   return (
     <footer className="site-footer noisy">
-      <img src="/images/footer-left-leaf.png" alt="" className="footer-leaf footer-leaf-left" />
-      <img src="/images/footer-right-leaf.png" alt="" className="footer-leaf footer-leaf-right" />
+      <img src="/images/footer-left-leaf.png" alt="" className="footer-leaf footer-leaf-left" loading="lazy" />
+      <img src="/images/footer-right-leaf.png" alt="" className="footer-leaf footer-leaf-right" loading="lazy" />
 
       <div className="site-footer-inner">
         <div>
           <Link href="/" className="footer-brand">
-            <img src="/images/logo.png" alt="Velvet Pour" />
+            <img src="/images/logo.png" alt="Velvet Pour" loading="lazy" />
             <span>Velvet Pour</span>
           </Link>
           <p>香り、温度、余韻まで美しく整えるクラフトカクテルバー。</p>
@@ -33,7 +33,7 @@ export default function SiteFooter() {
         <div className="footer-socials">
           {socials.map((social) => (
             <a key={social.name} href={social.url} target="_blank" rel="noopener noreferrer" aria-label={social.name}>
-              <img src={social.icon} alt="" />
+              <img src={social.icon} alt="" loading="lazy" />
             </a>
           ))}
         </div>
