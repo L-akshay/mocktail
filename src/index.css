@@ -63,7 +63,7 @@ body {
     }
 
     nav.nav-root {
-        @apply fixed z-50 w-full bg-[#00000090] backdrop-blur-md transition-colors;
+        @apply fixed z-50 w-full transition-colors;
     }
 
     .nav-inner {
